@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous">
+        <link
+            rel="stylesheet"
+            href="">
+        <link rel="stylesheet" href="../resources/css/highlightjs/default.css">
+        <link rel="stylesheet" href="../resources/css/class.css">
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous">
+        </script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous">
+        </script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous">
+        </script>
+        <script charset="utf-8" src="../resources/js/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo3.jpg" width="150" class="d-inline-block align-top" alt="">
+            </a>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3">
+                    Left Sidebar
+                </div>
+                <div class="col-9">
+                    <div class="row class-header">
+                        <div class="col">
+                            <h1 class="class-header-title">{{className}}</h1>
+                            {{#if classText}}
+                                <h2>Summary</h2>
+                                <p>{{{classText}}}</p>
+                            {{/if}}
+                        </div>
+                    </div>
+
+                    {{#if properties}}
+                        <div class="row type-ct properties">
+                            <div class="col">
+                                <a name="properties"></a>
+                                <h1>Properties</h1>
+                                {{#each properties}}
+                                    {{> member type="properties" singularType="property"}}
+                                {{/each}}
+                            </div>
+                        </div>
+                    {{/if}}
+
+                    {{#if configs}}
+                        <div class="row type-ct configs">
+                            <div class="col">
+                                <a name="configs"></a>
+                                <h1>Configs</h1>
+                                {{#each configs}}
+                                    {{> member type="configs" singularType="config"}}
+                                {{/each}}
+                            </div>
+                        </div>
+                    {{/if}}
+
+                    {{#if methods}}
+                        <div class="row type-ct methods">
+                            <div class="col">
+                                <a name="methods"></a>
+                                <h1>Methods</h1>
+                                {{#each methods}}
+                                    {{> member type="methods" singularType="method"}}
+                                {{/each}}
+                            </div>
+                        </div>
+                    {{/if}}
+
+                    {{#if events}}
+                        <div class="row type-ct events">
+                            <div class="col">
+                                <a name="events"></a>
+                                <h1>Events</h1>
+                                {{#each events}}
+                                    {{> member type="events" singularType="event"}}
+                                {{/each}}
+                            </div>
+                        </div>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+{{#*inline "member" type singularType}}
+    <div class="member">
+        <h2 class="member-header">
+            <a href="#{{singularType}}-{{name}}" class="member-name-link">
+                <span class="member-name">{{name}}</span>
+            </a>
+        </h2>
+        <div class="member-description {{type}}-description">{{{text}}}</div>
+    </div>
+{{/inline}}

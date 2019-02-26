@@ -1,0 +1,98 @@
+{
+    "extends": [
+        "eslint:recommended"
+    ],
+    "parser": "babel-eslint",
+    "settings": {
+        "react": {
+            "version": "15.4.1"
+        }
+    },
+    "env": {
+        "browser": true,
+        "node": true,
+        "mocha": true
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "quotes": [
+            2,
+            "single"
+        ],
+        "no-case-declarations": 1,
+        "no-class-assign": 0,
+        "no-unused-vars": 1,
+        "react/display-name": 0,
+        "react/prop-types": 0,
+        "react/no-multi-comp": 0,
+        "react/react-in-jsx-scope": 0,
+        "semi": [
+            "error",
+            "always"
+        ],
+        "object-shorthand": [
+            "error",
+            "always"
+        ],
+        "comma-dangle": [
+            "error",
+            "never"
+        ],
+        "prefer-destructuring": [
+            "error",
+            {
+                "array": true,
+                "object": true
+            }
+        ],
+        "jsx-quotes": [
+            "error",
+            "prefer-double"
+        ],
+        "react/jsx-props-no-multi-spaces": "error",
+        "react/destructuring-assignment": [
+            "error",
+            "always"
+        ],
+        "react/no-typos": "error",
+        "react/no-unused-state": "error",
+        "react/jsx-tag-spacing": [
+            "error",
+            {
+                "closingSlash": "never",
+                "beforeSelfClosing": "always",
+                "afterOpening": "never",
+                "beforeClosing": "never"
+            }
+        ],
+        "react/jsx-equals-spacing": [
+            "error",
+            "never"
+        ],
+        "react/jsx-first-prop-new-line": "error",
+        "react/self-closing-comp": "error",
+        "react/require-render-return": "error",
+        "react/prefer-es6-class": [
+            "error",
+            "always"
+        ],
+        "react/jsx-no-undef": "error",
+        "react/jsx-no-duplicate-props": [
+            "error",
+            {
+                "ignoreCase": true
+            }
+        ],
+        "space-before-function-paren": [
+            "error",
+            "never"
+        ],
+        "react/no-unescaped-entities": "off",
+        "object-curly-spacing": [
+            "warn",
+            "never"
+        ]
+    }
+}

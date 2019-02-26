@@ -1,0 +1,65 @@
+{
+    "version": 1,
+    "profiles": {
+        "js": {
+            "language": "javascript",
+            "builtins": [
+                "Mixed",
+                "Event",
+                "HTMLElement",
+                "undefined",
+                "null",
+                "Window",
+                "Error",
+                "CSSStyleRule",
+                "CSSStyleSheet",
+                "Arguments",
+                "Integer",
+                "XMLElement",
+                "TextNode",
+                "Uint8Array",
+                "NodeList",
+                "XMLHttpRequest",
+                "FileList",
+                "measurement",
+                "percent",
+                "List",
+                "north", "east", "west", "south", "center",
+                "top", "left", "right", "bottom"
+            ]
+        },
+        "sass": {
+            "language": "sass",
+            "builtins": [
+                "Color",
+                "color",
+                "list"
+            ]
+        }
+    },
+    "sources": [{
+        "profile": "js",
+        "path": [
+            "../test"
+        ]
+    }],
+    "outputs": {
+        "combo-nosrc": {
+            "type": "json",
+            "dir": "../output",
+            "includeSrc": true,
+            "links": true,
+            "flatten": true,
+            "autoLinks": [
+                "text",
+                "deprecatedMessage",
+                "removedMessage"
+            ],
+            "renames": {
+                "number"  : "Number",
+                "boolean" : "Boolean",
+                "string"  : "String"
+            }
+        }
+    }
+}

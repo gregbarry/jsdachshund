@@ -1,0 +1,39 @@
+a {
+    text-decoration: none;
+    color: #0a8cc6;
+    transition: color .25s ease-out;
+}
+
+a:hover {
+    color: #025b80;
+}
+
+.class-header h1 {
+    color: #025b80;
+    font-size:1.5em;
+    font-weight:300;
+}
+
+.class-header h2 {
+    font-weight:300;
+    font-size: 1.75em;
+}
+
+.class-header h1:first-of-type {
+    font-size: 2.5em;
+}
+
+.type-ct h1 {
+    color: #025b80;
+    font-size: 1.5em;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.member-name {
+    font-size:.6em;
+}
+
+.member h3 {
+    font-size:1.2em
+}
